@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NeRecipe</string>
+    <string name="more">Ещё…</string>
+    <string name="previous">Предыдущий</string>
+    <string name="next">Следующий</string>
+    <string name="addRecipe">Добавить рецепт</string>
+    <string name="save">Сохранить</string>
+    <string name="contentTitle">Название</string>
+    <string name="descriptionTitle">Описание</string>
+    <string name="categoryTitle">Категория</string>
+    <string name="stepsTitle">Шаги</string>
+    <string name="remove">Удалить</string>
+    <string name="edit">Редактировать</string>
+    <string name="emptyList">Рецептов не найдено</string>
+    <string name="European">Европейская</string>
+    <string name="Asian">Азиатская</string>
+    <string name="PanAsian">Паназиатская</string>
+    <string name="Eastern">Восточная</string>
+    <string name="American">Американская</string>
+    <string name="Russian">Русская</string>
+    <string name="Mediterranean">Средиземноморская</string>
+    <string name="menu">Меню</string>
+    <string name="back">Назад</string>
+    <string name="title_home">Рецепты</string>
+    <string name="title_favorite">Избранное</string>
+    <string name="title_filter">Выберите категории</string>
+    <string name="addImage">Добавить изображение к шагу</string>
+    <string name="up">Переместить выше</string>
+    <string name="down">Переместить ниже</string>
+</resources>

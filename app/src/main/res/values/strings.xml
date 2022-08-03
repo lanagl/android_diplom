@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">NeRecipe</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="more">More</string>
+    <string name="addRecipe">Add recipe</string>
+    <string name="save">Save</string>
+    <string name="contentTitle">Title</string>
+    <string name="descriptionTitle">Description</string>
+    <string name="categoryTitle">Category</string>
+    <string name="stepsTitle">Steps</string>
+    <string name="remove">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="menu">Menu</string>
+    <string name="emptyList">No recipe found</string>
+    <string name="back">Back</string>
+    <string name="European">European</string>
+    <string name="Asian">Asian</string>
+    <string name="PanAsian">Pan-Asian</string>
+    <string name="Eastern">Eastern</string>
+    <string name="American">American</string>
+    <string name="Russian">Russian</string>
+    <string name="Mediterranean">Mediterranean</string>
+    <string name="title_home">Recipes</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="title_filter">Filters category</string>
+    <string name="addImage">Add image to step</string>
+    <string name="up">Move up</string>
+    <string name="down">Move down</string>
+</resources>
