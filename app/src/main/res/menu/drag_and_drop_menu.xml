@@ -4,4 +4,10 @@
         android:title="@string/up" />
     <item android:id="@+id/down"
         android:title="@string/down" />
+    <item
+        android:id="@+id/edit"
+        android:title="@string/edit" />
+    <item
+        android:id="@+id/remove"
+        android:title="@string/remove" />
 </menu>

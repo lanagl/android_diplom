@@ -16,6 +16,7 @@ import ru.netology.nerecipe.data.RecipeRepository.Companion.checkedCategories
 import ru.netology.nerecipe.data.RecipeRepository.Companion.searchText
 import ru.netology.nerecipe.databinding.FragmentListBinding
 import ru.netology.nerecipe.dto.Recipe
+import ru.netology.nerecipe.ui.RecipeContentFragment.Companion.recipeId
 import ru.netology.nerecipe.viewModel.FilterViewModel
 import ru.netology.nerecipe.viewModel.RecipeViewModel
 
@@ -104,6 +105,16 @@ class ListFragment : Fragment() {
 
         binding.additionalFragmentContainer.filter.setOnClickListener {
             findNavController().navigate(R.id.action_listFragment_to_filterFragment)
+        }
+
+        viewModel.navigateToEditRecipeContentScreenEvent.observe(viewLifecycleOwner){
+            val id = it
+            if (id != null) {
+                findNavController().navigate(R.id.action_listFragment_to_recipeContentFragment,
+                    Bundle().apply {
+                        recipeId = id
+                    })
+            }
         }
 
 

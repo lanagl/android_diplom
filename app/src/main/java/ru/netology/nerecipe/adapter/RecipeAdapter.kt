@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import android.widget.PopupMenu
 import androidx.lifecycle.LiveData
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -81,7 +83,19 @@ class RecipeAdapter(
                                 binding.optionsDnd.visibility = GONE
                                 true
                             }
+                            R.id.remove -> {
+                                if (recipe != null) {
+                                    listener.onDeleteClicked(recipe)
 
+                                }
+                                true
+                            }
+                            R.id.edit -> {
+                                if (recipe != null) {
+                                    listener.onEditClicked(recipe)
+                                }
+                                true
+                            }
                             else -> {
                                 binding.optionsDnd.visibility = GONE
                                 false

@@ -14,7 +14,7 @@ class StepRepositoryImpl(private val dao: StepsDao) : StepRepository {
     }
 
     @SuppressLint("CheckResult")
-    override fun move(step: Step, endPosition: Int) {
+    override fun move(step: Step, endPosition: Long) {
 
         dao.getStepsForRecipe(step.recipeId).map { stepList ->
             stepList.map {

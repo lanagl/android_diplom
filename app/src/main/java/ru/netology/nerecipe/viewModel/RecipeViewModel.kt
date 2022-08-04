@@ -40,7 +40,7 @@ RecipeListener{
     val favoriteData by repository::favoriteData
     private val currentRecipe = MutableLiveData<Recipe?>(null)
     val navigateToRecipeContentScreenEvent = SingleLiveEvent<Unit?>()
-    val navigateToEditRecipeContentScreenEvent = SingleLiveEvent<Unit?>()
+    val navigateToEditRecipeContentScreenEvent = SingleLiveEvent<Long>()
     val searchTextEvent = SingleLiveEvent<Unit?>()
 
 
@@ -68,7 +68,7 @@ RecipeListener{
 
     override fun onEditClicked(recipe: Recipe) {
         currentRecipe.value=recipe
-        navigateToEditRecipeContentScreenEvent.call()
+        navigateToEditRecipeContentScreenEvent.value = recipe.id
     }
 
     override fun onFavoriteClicked(recipe: Recipe) {

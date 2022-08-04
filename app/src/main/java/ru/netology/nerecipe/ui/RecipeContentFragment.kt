@@ -17,6 +17,8 @@ import ru.netology.nerecipe.data.StepRepository.Companion.NEW_STEP_ID
 import ru.netology.nerecipe.databinding.FragmentRecipeContentBinding
 import ru.netology.nerecipe.dto.Category
 import ru.netology.nerecipe.dto.Step
+import ru.netology.nerecipe.util.findMax
+import ru.netology.nerecipe.util.findMaxStepId
 import ru.netology.nerecipe.viewModel.RecipeViewModel
 import ru.netology.nerecipe.viewModel.StepsViewModel
 
@@ -85,8 +87,8 @@ class RecipeContentFragment : Fragment() {
             if (!title.isNullOrBlank() && !description.isNullOrBlank()
             ) {
                 viewModel.onSaveButtonClicked(
-                    title.toString(),
                     description.toString(),
+                    title.toString(),
                     category.id
                 )
                 if (stepsList.size > 0 && CURRENT_RECIPE_ID != 0L) {
@@ -104,7 +106,7 @@ class RecipeContentFragment : Fragment() {
         binding.addButton.setOnClickListener {
             val stepItem = binding.step.text.toString()
             binding.step.text = null
-            val newStep = Step(id = NEW_STEP_ID, content = stepItem, sort = 0, recipeId = 0L)
+            val newStep = Step(id = NEW_STEP_ID, content = stepItem, sort = 0, recipeId = findMaxStepId(stepsList) +1)
             stepsList.add(newStep)
             viewModelSteps.addStep(newStep)
         }

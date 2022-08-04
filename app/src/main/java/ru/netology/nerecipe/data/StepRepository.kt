@@ -5,7 +5,7 @@ import ru.netology.nerecipe.dto.Step
 
 interface StepRepository {
     val data: LiveData<List<Step>>
-    fun move(step: Step, endPosition: Int)
+    fun move(step: Step, endPosition: Long)
     fun delete(step: Step)
     fun save(stepList: List<Step>)
     fun removeByRecipeId(recipeId: Long)

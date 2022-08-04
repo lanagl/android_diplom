@@ -22,7 +22,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/options_dnd"
-            android:gravity="start"
+            android:textSize="@dimen/title_font_size"
             />
         <androidx.appcompat.widget.AppCompatImageButton
             android:layout_width="wrap_content"
@@ -39,8 +39,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/recipeAuthor"
+            tools:text="Описание рецепта"
+            android:id="@+id/recipeDescription"
             app:layout_constraintTop_toBottomOf="@id/recipeTitle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:maxLines="3"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recipeAuthor"
+            app:layout_constraintTop_toBottomOf="@id/recipeCategory"
             app:layout_constraintLeft_toLeftOf="parent"
             tools:text="Автор"
             />
@@ -48,27 +57,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/recipeCategory"
-            app:layout_constraintTop_toBottomOf="@id/recipeAuthor"
+            app:layout_constraintTop_toBottomOf="@id/recipeDescription"
             app:layout_constraintLeft_toLeftOf="parent"
             tools:text="Категория"
             />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="Описание рецепта"
-            android:id="@+id/recipeDescription"
-            app:layout_constraintTop_toBottomOf="@id/recipeCategory"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:maxLines="3"
-            />
+
         <com.google.android.material.button.MaterialButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/favoriteButton"
             app:icon="@drawable/ic_baseline_favorite_border_24dp"
             style="@style/Widget.AppTheme.FavoriteCheckbox"
-            app:layout_constraintTop_toBottomOf="@id/recipeDescription"
+            app:layout_constraintTop_toBottomOf="@id/recipeAuthor"
             app:layout_constraintRight_toRightOf="parent"
             android:checkable="true"
             tools:checked="true"

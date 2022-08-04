@@ -18,7 +18,7 @@ class StepsEntity(
     @ColumnInfo(name="content")
     val content: String?,
     @ColumnInfo(name="sort")
-    val sort: Int,
+    val sort: Long,
     @ColumnInfo(name="recipeId")
     val recipeId: Long
 )

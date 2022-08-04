@@ -133,19 +133,11 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/addButton"
             app:layout_constraintTop_toBottomOf="@id/stepsTitle" />
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/addImage"
-            android:id="@+id/addImageButton"
-            app:layout_constraintTop_toBottomOf="@id/step"
-            app:layout_constraintLeft_toLeftOf="parent"
-            />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/addImageButton"
+            app:layout_constraintTop_toBottomOf="@id/step"
             app:layout_constraintLeft_toLeftOf="parent"
             android:id="@+id/stepImagePreview"
             />
@@ -171,7 +163,6 @@
             android:layout_height="wrap_content"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintTop_toBottomOf="@id/stepImagePreview"
-            tools:layout_editor_absoluteX="52dp"
             tools:listitem="@layout/step_item" />
 
 

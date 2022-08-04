@@ -8,13 +8,13 @@ import kotlinx.serialization.Serializable
 data class Step(
     val id: Long,
     val content: String?,
-    val sort: Int,
+    val sort: Long,
     val recipeId: Long
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readLong(),
         parcel.readString(),
-        parcel.readInt(),
+        parcel.readLong(),
         parcel.readLong()
     )
 
@@ -25,7 +25,7 @@ data class Step(
     override fun writeToParcel(dest: Parcel?, flags: Int) {
         dest?.writeLong(id)
         dest?.writeString(content)
-        dest?.writeInt(sort)
+        dest?.writeLong(sort)
         dest?.writeLong(recipeId)
     }
 

@@ -69,6 +69,7 @@ class RecipeFragment : Fragment() {
             with(binding){
                 title.text = currentRecipe?.name
                 description.text = currentRecipe?.description
+                description.text = currentRecipe?.description
                 val catId = root.resources.getIdentifier(currentRecipe?.category,"string", root.context.packageName)
                 category.text=root.resources.getString(catId)
                 submenu.setOnClickListener { popupMenu.show() }

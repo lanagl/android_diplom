@@ -60,7 +60,7 @@ internal class FilterAdapter(
             with(binding) {
                 checkFilterItem.text=item.name
                 checkFilterName.text=item.id
-                checkFilterItem.isChecked = item.id in checkedCategory
+                checkFilterItem.isChecked = (item.id in checkedCategory || checkedCategory.isEmpty())
             }
         }
 
