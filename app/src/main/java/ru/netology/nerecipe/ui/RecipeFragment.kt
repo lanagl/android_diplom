@@ -66,13 +66,23 @@ class RecipeFragment : Fragment() {
             val currentRecipe = recipes.find {
                 it.id == id
             }
-            with(binding){
-                title.text = currentRecipe?.name
-                description.text = currentRecipe?.description
-                description.text = currentRecipe?.description
-                val catId = root.resources.getIdentifier(currentRecipe?.category,"string", root.context.packageName)
-                category.text=root.resources.getString(catId)
-                submenu.setOnClickListener { popupMenu.show() }
+
+                with(binding) {
+                    title.text = currentRecipe?.name
+                    description.text = currentRecipe?.description
+                    description.text = currentRecipe?.description
+
+                    val recipeCategory = currentRecipe?.category?:R.string.European.toString()
+
+                    val catId = root.resources.getIdentifier(
+                        recipeCategory,
+                        "string",
+                        root.context.packageName
+                    )
+
+                    category.text = root.resources.getString(catId)
+                    submenu.setOnClickListener { popupMenu.show() }
+
 
             }
         }
