@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View.GONE
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -17,7 +16,6 @@ import ru.netology.nerecipe.data.StepRepository.Companion.NEW_STEP_ID
 import ru.netology.nerecipe.databinding.FragmentRecipeContentBinding
 import ru.netology.nerecipe.dto.Category
 import ru.netology.nerecipe.dto.Step
-import ru.netology.nerecipe.util.findMax
 import ru.netology.nerecipe.util.findMaxStepId
 import ru.netology.nerecipe.viewModel.RecipeViewModel
 import ru.netology.nerecipe.viewModel.StepsViewModel
@@ -57,7 +55,6 @@ class RecipeContentFragment : Fragment() {
                 val currentCategory = viewModel.categories.find { category -> category.id == currentRecipe?.category }
 
                 val position = adapter?.getPosition(currentCategory)
-                Toast.makeText(context, (position).toString(), Toast.LENGTH_LONG).show()
 
                 if (position != null) {
                     category.setSelection(position)
